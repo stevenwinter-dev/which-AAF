@@ -1,33 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
 .App {
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.site-content {
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background-color: #1A3668;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.headerimg {
+width: 13%;
+height: 100%;
+margin: 5px;
+align-self: center;
+}
+
+.title {
+  display: inline-block;
+  align-self: center;
+  color: #FFFFFF;
+  letter-spacing: 3px;
+  width: 74%;
+}
+
+.instructions {
+  letter-spacing: 1px;
+}
+
+.footer {
+  background-color: #333333;
+  height: 60px;
+  display: flex;
+}
+
+.footer p {
+  align-self: center;
+  margin: 2px auto;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.created {
+  font-size: 1em;
+}
+
+.copyright {
+  
+  font-size: .8em;
+}
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+  transition: .2s;
+}
+
+a:hover {
+  color: rebeccapurple;
+}
+
+.site {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+}
+.site-content {
+  flex: 1 0 auto;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nfl-team-logo {
+  height: 2.5em;
+  width: 3em;
+  /* height: 100px;
+  width: 150px; */
+  border: 1px solid gray;
+  border-radius: 10%;
+  margin-right: 5px;
+  padding: 5px;
+  transition: 0.2s ease;
 }
+
+.conference:hover div > span {
+  opacity: 0.4;
+  transition: 0.4s ease;
+}
+
+.conference:hover div > span:hover {
+  opacity: 1.0;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.card {
+  width: 55%;
+  margin: 0 auto;
+  border-radius: 25px;
+  box-shadow: 10px 10px 5px grey;
+  letter-spacing: 1px;
+  /*background: rgb(51,63,72);
+  background: linear-gradient(158deg, rgba(51,63,72,1) 44%, rgba(246,192,60,1) 83%);*/
+}
+
+.card h2 {
+  padding-top: 20px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.hotshots {
+  background-color: #154734;
+  color: #DD462C;
+}
+
+.legends {
+  background-color: #470A68;
+  color: #BEB07D;
+}
+
+.iron {
+  background-color: #000000;
+  color: #616869;
+}
+
+.express {
+  background-color: #C8102E;
+  color: #111D2C;
+}
+
+.apollos {
+  background-color: #FE5000;
+  color: #12223D;
+}
+
+.stallions {
+  background-color: #0032A0;
+  color: #FFFFFE;
+}
+
+.commanders {
+  background-color: #651C32;
+  color: #BB2531;
+}
+
+.fleet {
+  background-color: #333F48;
+  color: #F6C03C;
+}
+
+
+@media only screen and (max-width : 382px) {
+  h1 {
+    font-size: 1.3em;
+  }
+  .nfl-team-logo {
+    height: 1.8em;
+    width: 2.25em;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .card h2 {
+    font-size: 1.28em;
+  }
+
+  .card img {
+    width: 98%;
+  }
+
+  .site-content {
+    width: 98%;
+  }
+
+  .header-content {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .headerimg {
+    width: 90%;
+    margin-top: 15px;
+  }
+    
+  .title {
+    width: 98%;
+  }
+
+
+  }
