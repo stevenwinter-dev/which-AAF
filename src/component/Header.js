@@ -7,7 +7,7 @@ const Header = () => {
         <div className="header">
         <div className="header-content">
             <img src={aaf} alt="aaf" className="headerimg"></img>
-            <h1 className="title">Which AAF team should you support?</h1>
+            <h1 className="title">Find Your AAF Team</h1>
         </div>
         </div>
         
