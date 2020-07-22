@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 import ravens from './images/ravens.png';
 import bills from './images/bills.png';
@@ -40,28 +40,19 @@ import Footer from './component/Footer';
 import Aaf from './component/aaf';
 import Nfl from './component/nfl';
 
-class App extends Component {
-  state = {
-    team: '',
-    img: '',
-    selected: false,
-    aafTeam: '',
-    aafImg: ''
+function App(){
+  const [team, setTeam] = useState('');
+  const [img, setImg] = useState('');
+  const [selected, setSelected] = useState(false);
+
+  const onClick = (e) => {
+    const selectedTeam = e.target.alt;
+    const selectedTeamImg = e.target.src;
+    setTeam(selectedTeam);
+    setImg(selectedTeamImg);
+    setSelected(true);
 }
 
-
-
-onClick = (e) => {
-  const selectedTeam = e.target.alt;
-  const selectedTeamImg = e.target.src;
-  this.setState({
-    team: selectedTeam,
-    img: selectedTeamImg,
-    selected: true   
-  })
-}
-  
-  render() {
     return (
       <div className="App site">
         <Header />
@@ -69,52 +60,51 @@ onClick = (e) => {
         <p className="instructions">Select your favorite NFL team</p>
         <div className="conference afc">
         <div className="afc">
-          <Nfl onClick={this.onClick} team={"Ravens"} img={ravens} />
-          <Nfl onClick={this.onClick} team={"Bills"} img={bills}  />
-          <Nfl onClick={this.onClick} team={"Bengals"} img={bengals}  />
-          <Nfl onClick={this.onClick} team={"Browns"} img={browns}  />
-          <Nfl onClick={this.onClick} team={"Broncos"} img={broncos}  />
-          <Nfl onClick={this.onClick} team={"Texans"} img={texans}  />
-          <Nfl onClick={this.onClick} team={"Colts"} img={colts}  />
-          <Nfl onClick={this.onClick} team={"Jaguars"} img={jaguars}  />
-          <Nfl onClick={this.onClick} team={"Chiefs"} img={chiefs}  />
-          <Nfl onClick={this.onClick} team={"Chargers"} img={chargers}  />
-          <Nfl onClick={this.onClick} team={"Dolphins"} img={dolphins}  />
-          <Nfl onClick={this.onClick} team={"Patriots"} img={pats}  />
-          <Nfl onClick={this.onClick} team={"Jets"} img={jets}  />
-          <Nfl onClick={this.onClick} team={"Raiders"} img={raiders}  />
-          <Nfl onClick={this.onClick} team={"Steelers"} img={steelers}  />
-          <Nfl onClick={this.onClick} team={"Titans"} img={titans}  />
+          <Nfl onClick={onClick} team={"Ravens"} img={ravens} />
+          <Nfl onClick={onClick} team={"Bills"} img={bills}  />
+          <Nfl onClick={onClick} team={"Bengals"} img={bengals}  />
+          <Nfl onClick={onClick} team={"Browns"} img={browns}  />
+          <Nfl onClick={onClick} team={"Broncos"} img={broncos}  />
+          <Nfl onClick={onClick} team={"Texans"} img={texans}  />
+          <Nfl onClick={onClick} team={"Colts"} img={colts}  />
+          <Nfl onClick={onClick} team={"Jaguars"} img={jaguars}  />
+          <Nfl onClick={onClick} team={"Chiefs"} img={chiefs}  />
+          <Nfl onClick={onClick} team={"Chargers"} img={chargers}  />
+          <Nfl onClick={onClick} team={"Dolphins"} img={dolphins}  />
+          <Nfl onClick={onClick} team={"Patriots"} img={pats}  />
+          <Nfl onClick={onClick} team={"Jets"} img={jets}  />
+          <Nfl onClick={onClick} team={"Raiders"} img={raiders}  />
+          <Nfl onClick={onClick} team={"Steelers"} img={steelers}  />
+          <Nfl onClick={onClick} team={"Titans"} img={titans}  />
           </div>
           <br />
           <div className="nfc">
-          <Nfl onClick={this.onClick} team={"Cardinals"} img={cards}  />
-          <Nfl onClick={this.onClick} team={"Falcons"} img={falcons}  />
-          <Nfl onClick={this.onClick} team={"Panthers"} img={panthers}  />
-          <Nfl onClick={this.onClick} team={"Bears"} img={bears}  />
-          <Nfl onClick={this.onClick} team={"Cowboys"} img={cowboys}  />
-          <Nfl onClick={this.onClick} team={"Lions"} img={lions}  />
-          <Nfl onClick={this.onClick} team={"Packers"} img={packers}  />
-          <Nfl onClick={this.onClick} team={"Rams"} img={rams}  />
-          <Nfl onClick={this.onClick} team={"Vikings"} img={vikings}  />
-          <Nfl onClick={this.onClick} team={"Saints"} img={saints}  />
-          <Nfl onClick={this.onClick} team={"Giants"} img={giants}  />
-          <Nfl onClick={this.onClick} team={"Eagles"} img={eagles}  />
-          <Nfl onClick={this.onClick} team={"49ers"} img={niners}  />
-          <Nfl onClick={this.onClick} team={"Seahawks"} img={seahawks}  />
-          <Nfl onClick={this.onClick} team={"Buccaneers"} img={buccaneers}  />
-          <Nfl onClick={this.onClick} team={"Skins"} img={skins}  />        
+          <Nfl onClick={onClick} team={"Cardinals"} img={cards}  />
+          <Nfl onClick={onClick} team={"Falcons"} img={falcons}  />
+          <Nfl onClick={onClick} team={"Panthers"} img={panthers}  />
+          <Nfl onClick={onClick} team={"Bears"} img={bears}  />
+          <Nfl onClick={onClick} team={"Cowboys"} img={cowboys}  />
+          <Nfl onClick={onClick} team={"Lions"} img={lions}  />
+          <Nfl onClick={onClick} team={"Packers"} img={packers}  />
+          <Nfl onClick={onClick} team={"Rams"} img={rams}  />
+          <Nfl onClick={onClick} team={"Vikings"} img={vikings}  />
+          <Nfl onClick={onClick} team={"Saints"} img={saints}  />
+          <Nfl onClick={onClick} team={"Giants"} img={giants}  />
+          <Nfl onClick={onClick} team={"Eagles"} img={eagles}  />
+          <Nfl onClick={onClick} team={"49ers"} img={niners}  />
+          <Nfl onClick={onClick} team={"Seahawks"} img={seahawks}  />
+          <Nfl onClick={onClick} team={"Buccaneers"} img={buccaneers}  />
+          <Nfl onClick={onClick} team={"Skins"} img={skins}  />        
           </div>
         </div>
 
-        {this.state.selected ? 
-          <Aaf team={this.state.team} img={this.state.img} onClick={this.onClick} /> 
+        {selected ? 
+          <Aaf team={team} img={img} onClick={onClick} /> 
           : null }
         </div>
         <Footer />
       </div>
     );
   }
-}
 
 export default App;
