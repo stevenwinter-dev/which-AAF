@@ -35,7 +35,7 @@ import seahawks from '../images/seahawks.png';
 import buccaneers from '../images/buccaneers.png';
 import skins from '../images/skins.png';
 
-function Nfl(props) {
+function nfl(props) {
     return(
         <div className="conference afc">
             <div className="afc">
@@ -79,4 +79,4 @@ function Nfl(props) {
     )
 }
 
-export default Nfl;
+export default nfl;

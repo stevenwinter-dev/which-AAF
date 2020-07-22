@@ -4,7 +4,7 @@ import './App.css';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import Aaf from './component/aaf';
-import NFL from './component/Nfl';
+import NFL from './component/nfl';
 
 function App(){
   const [team, setTeam] = useState('');
