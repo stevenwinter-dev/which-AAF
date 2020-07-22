@@ -10,7 +10,6 @@
 }
 
 .header {
-  background-color: #1A3668;
   width: 100%;
 }
 
@@ -30,13 +29,14 @@ align-self: center;
 .title {
   display: inline-block;
   align-self: center;
-  color: #FFFFFF;
+  color: #fff;
   letter-spacing: 3px;
   width: 74%;
 }
 
 .instructions {
   letter-spacing: 1px;
+  color: white;
 }
 
 .footer {
@@ -97,6 +97,7 @@ h1 {
   margin-right: 5px;
   padding: 5px;
   transition: 0.2s ease;
+  background-color: white;
 }
 
 .conference:hover div > span {
@@ -114,10 +115,8 @@ h1 {
   width: 55%;
   margin: 0 auto;
   border-radius: 25px;
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 10px 10px 5px black;
   letter-spacing: 1px;
-  /*background: rgb(51,63,72);
-  background: linear-gradient(158deg, rgba(51,63,72,1) 44%, rgba(246,192,60,1) 83%);*/
 }
 
 .card h2 {
