@@ -37,7 +37,7 @@ import skins from '../images/skins.png';
 
 function nfl(props) {
     return(
-        <div className="conference afc">
+        <div className="conference">
             <div className="afc">
                 <Team onClick={props.onClick} team={"Ravens"} img={ravens} />
                 <Team onClick={props.onClick} team={"Bills"} img={bills}  />
@@ -47,6 +47,7 @@ function nfl(props) {
                 <Team onClick={props.onClick} team={"Texans"} img={texans}  />
                 <Team onClick={props.onClick} team={"Colts"} img={colts}  />
                 <Team onClick={props.onClick} team={"Jaguars"} img={jaguars}  />
+                <br />
                 <Team onClick={props.onClick} team={"Chiefs"} img={chiefs}  />
                 <Team onClick={props.onClick} team={"Chargers"} img={chargers}  />
                 <Team onClick={props.onClick} team={"Dolphins"} img={dolphins}  />
@@ -55,9 +56,9 @@ function nfl(props) {
                 <Team onClick={props.onClick} team={"Raiders"} img={raiders}  />
                 <Team onClick={props.onClick} team={"Steelers"} img={steelers}  />
                 <Team onClick={props.onClick} team={"Titans"} img={titans}  />
-                </div>
+            </div>
                 <br />
-                <div className="nfc">
+            <div className="nfc">
                 <Team onClick={props.onClick} team={"Cardinals"} img={cards}  />
                 <Team onClick={props.onClick} team={"Falcons"} img={falcons}  />
                 <Team onClick={props.onClick} team={"Panthers"} img={panthers}  />
@@ -66,6 +67,7 @@ function nfl(props) {
                 <Team onClick={props.onClick} team={"Lions"} img={lions}  />
                 <Team onClick={props.onClick} team={"Packers"} img={packers}  />
                 <Team onClick={props.onClick} team={"Rams"} img={rams}  />
+                <br />
                 <Team onClick={props.onClick} team={"Vikings"} img={vikings}  />
                 <Team onClick={props.onClick} team={"Saints"} img={saints}  />
                 <Team onClick={props.onClick} team={"Giants"} img={giants}  />

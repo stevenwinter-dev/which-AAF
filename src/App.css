@@ -88,8 +88,8 @@ h1 {
 }
 
 .nfl-team-logo {
-  height: 2.5em;
-  width: 3em;
+  height: 3.75em;
+  width: 4.5em;
   /* height: 100px;
   width: 150px; */
   border: 1px solid gray;
@@ -112,8 +112,9 @@ h1 {
 }
 
 .card {
-  width: 55%;
+  max-width: 25%;
   margin: 0 auto;
+  margin-top: 30px;
   border-radius: 25px;
   box-shadow: 10px 10px 5px black;
   letter-spacing: 1px;
@@ -121,7 +122,7 @@ h1 {
 
 .card h2 {
   padding-top: 20px;
-  font-size: 1.5em;
+  font-size: 100%;
   text-transform: uppercase;
 }
 
@@ -165,14 +166,38 @@ h1 {
   color: #F6C03C;
 }
 
+@media only screen and (max-width : 1215px) {
+  .nfl-team-logo {
+    height: 2.5em;
+    width: 3em;
+  }
+  .card {
+    width: 90%;
+    margin-bottom: 15px;
+  }
 
+  .card h2 {
+    font-size: 1.28em;
+  }
+
+  .card img {
+    max-width: 98%;
+  }
+}
+
+@media only screen and (max-width : 520px) {
+  .nfl-team-logo {
+    height: 1.25em;
+    width: 1.5em;
+  }
+}
 @media only screen and (max-width : 382px) {
   h1 {
     font-size: 1.3em;
   }
   .nfl-team-logo {
-    height: 1.8em;
-    width: 2.25em;
+    height: 1.35em;
+    width: 1.69em;
   }
 
   .card {
@@ -185,7 +210,7 @@ h1 {
   }
 
   .card img {
-    width: 98%;
+    max-width: 98%;
   }
 
   .site-content {
